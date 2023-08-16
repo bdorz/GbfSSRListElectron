@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="./css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./checkout.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="bg-light">
+    <br />
+    <button class="btn btn-secondary" type="button" id="btnPro">雛型字串</button>
+    <!--<button class="btn btn-primary" type="button" id="btnInit">初始化</button>-->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">主頁面</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="mainTitle.html">個人頁</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LB.html">LB</a>
+      </li>
+    </ul>
+
+    <div class="container-fluid">
+      <main>
+        <div class="row g-2">
+          <div class="col-md-8 col-lg-8">
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnOther" onclick="btnOther()">匯出</button>
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnOtherClear" onclick="btnOtherClear()">清空</button>
+            <div class="row g-2">
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="twName"
+                  placeholder="名稱">
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="fullName"
+                  placeholder="稱號+名稱">
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="img1"
+                  placeholder="起始圖">
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="img2"
+                  placeholder="解放圖">
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="img3"
+                  placeholder="終解圖">
+              </div>
+              <div class="col-md-3">
+                <label for="race" class="form-label">種族</label>
+                <select class="form-select" id="race">
+                  <option>ヒューマン</option>
+                  <option>エルーン</option>
+                  <option>ドラフ</option>
+                  <option>ハーヴィン</option>
+                  <option>星晶獣</option>
+                  <option>その他</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type">
+                  <option value="平衡">平衡</option>
+                  <option value="攻撃">攻撃</option>
+                  <option value="防御">防御</option>
+                  <option value="回復">回復</option>
+                  <option value="特殊">特殊</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="proud1" class="form-label">得意1</label>
+                <select class="form-select" id="proud1">
+                  <option>劍</option>
+                  <option>短劍</option>
+                  <option>槍</option>
+                  <option>斧</option>
+                  <option>杖</option>
+                  <option>銃</option>
+                  <option>格鬥</option>
+                  <option>弓</option>
+                  <option>樂器</option>
+                  <option>刀</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="proud2" class="form-label">得意2</label>
+                <select class="form-select" id="proud2">
+                  <option value> </option>
+                  <option>劍</option>
+                  <option>短劍</option>
+                  <option>槍</option>
+                  <option>斧</option>
+                  <option>杖</option>
+                  <option>銃</option>
+                  <option>格鬥</option>
+                  <option>弓</option>
+                  <option>樂器</option>
+                  <option>刀</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="cv" class="form-label">聲優</label>
+                <input type="text" class="form-control" id="cv"
+                  placeholder>
+              </div>
+              <div class="col-md-3">
+                <label for="hp" class="form-label">HP</label>
+                <div class="input-group has-validation">
+                  <input type="text" class="form-control" id="hp" placeholder>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label for="atk" class="form-label">ATK</label>
+                <input type="email" class="form-control" id="atk" placeholder>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="form-group">
+              <label for="resultOther">匯出</label>
+              <textarea class="form-control" id="resultOther" rows="10"></textarea>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row g-2">
+          <p class="h3">奧義</p>
+          <div class="col-md-8 col-lg-8">
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnMystery" onclick="btnMystery()">匯出</button>
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnMysteryClear" onclick="btnMysteryClear()">清空</button>
+            <div class="row g-2">
+              <div class="form-group col-md-3 g-2">
+                <label for="msName">名稱</label>
+                <textarea class="form-control" id="msName" rows="6"></textarea>
+              </div>
+              <div class="col-sm-9 row g-1">
+                <div class="col-sm-12">
+                  <label for="msEff">效果</label>
+                  <input type="text" class="form-control" id="msEff">
+                </div>
+                <div class="col-sm-12">
+                  <textarea class="form-control" id="msEffInfo" rows="4"></textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="resultMystery">匯出</label>
+              <textarea class="form-control" id="resultMystery" rows="7"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <p class="h3">技能</p>
+          <div class="col-md-8 col-lg-8">
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnSkill" onclick="btnSkill()">匯出</button>
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnSkillClear" onclick="btnSkillClear()">清空</button>
+
+            <div class="row g-2">
+              <div class="col-md-3 row g-2">
+                <div class="col-md-12">
+                  <label for="skillName">技能</label>
+                  <input type="text" class="form-control" id="skillName">
+                </div>
+                <div class="col-md-12">
+                  <select class="form-select" id="skillColor">
+                    <option>紅</option>
+                    <option>黃</option>
+                    <option>綠</option>
+                    <option>藍</option>
+                    <option>紫</option>
+                  </select>
+                </div>
+                <div class="col-md-12  gx-3">
+                  <input type="checkbox" class="form-check-input" id="link">
+                  <label class="form-check-label" for="link">LINK</label>
+                </div>
+              </div>
+              <div class="col-sm-1 row g-2">
+                <div class="col-md-12">
+                  <label for="skillLevelOne">等級</label>
+                  <input type="text" class="form-control" id="skillLevelOne">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillLevelTwo">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillLevelThree">
+                </div>
+              </div>
+              <div class="col-sm-1 row g-2">
+                <div class="col-md-12">
+                  <label for="skillTurnOne">持續</label>
+                  <input type="text" class="form-control" id="skillTurnOne">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillTurnTwo">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillTurnThree">
+                </div>
+              </div>
+              <div class="col-sm-1 row g-2">
+                <div class="col-md-12">
+                  <label for="skillCDOne">冷卻</label>
+                  <input type="text" class="form-control" id="skillCDOne">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillCDTwo">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillCDThree">
+                </div>
+              </div>
+              <div class="col-sm-6 row g-2">
+                <div class="col-md-12">
+                  <label for="skillEffOne">效果</label>
+                  <input type="text" class="form-control" id="skillEffOne">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillEffTwo">
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" id="skillEffThree">
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <textarea class="form-control" id="outpuSkillEffInfoOther"
+                  rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="form-group">
+              <label for="resultSkill">匯出</label>
+              <textarea class="form-control" id="resultSkill" rows="12"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <p class="h3">被動</p>
+          <div class="col-md-8 col-lg-8">
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnSubSkill" onclick="btnSubSkill()">匯出</button>
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnSubSkillClear" onclick="btnSubSkillClear()">清空</button>
+            <div class="row g-2">
+              <div class="form-group col-md-3 g-2">
+                <label for="subSkillName">名稱</label>
+                <textarea class="form-control" id="subSkillName" rows="6"></textarea>
+              </div>
+              <div class="col-sm-9 row g-1">
+                <div class="col-sm-12">
+                  <label for="subSkillEff">效果</label>
+                  <input type="text" class="form-control" id="subSkillEff">
+                </div>
+                <div class="col-sm-12">
+                  <textarea class="form-control" id="subSkillEffInfo" rows="4"></textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="resultSubSkill">匯出</label>
+              <textarea class="form-control" id="resultSubSkill" rows="7"></textarea>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+    <script src="./mainTitle.js"></script>
+    <script src="./css/js/bootstrap.js"></script>
+    <script src="./css/js/bootstrap.bundle.js"></script>
+    <script src="./css/js/bootstrap.esm.js"></script>
+    <script src="./css/checkout.js"></script>
+  </body>
+</html>

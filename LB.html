@@ -1,0 +1,331 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./css/checkout.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>GbfSSRList</title>
+    <style>
+      .img-thumbnail{
+        height:78px;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <button class="btn btn-secondary" type="button" id="btnPro">雛型字串</button>
+    <br />
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">主頁面</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mainTitle.html">個人頁</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="LB.html">LB</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <main>
+        <div class="row">
+          <div class="col-md-5 overflow-auto" style="height: 800px; ">
+            <img src="./IMAGE/ATK.png" class="img-thumbnail"
+              onclick="imgclick(atk)" id="atk" alt="atk">
+            <img src="./IMAGE/防禦力.png" class="img-thumbnail"
+              onclick="imgclick(def)" id="def" alt="def">
+            <img src="./IMAGE/HP.png" class="img-thumbnail"
+              onclick="imgclick(hp)" id="hp" alt="hp">
+            <img src="./IMAGE/回復.png" class="img-thumbnail"
+              onclick="imgclick(reply)" id="reply" alt="reply">
+            <img src="./IMAGE/技能傷害.png" class="img-thumbnail"
+              onclick="imgclick(skillDmg)" id="skillDmg" alt="skillDmg">
+
+            <img src="./IMAGE/技能傷害上限.png" class="img-thumbnail"
+              onclick="imgclick(skillDmgLimit)" id="skillDmgLimit"
+              alt="skillDmgLimit">
+            <img src="./IMAGE/OD傷害強化.png" class="img-thumbnail"
+              onclick="imgclick(ODDmg)" id="ODDmg" alt="ODDmg">
+            <img src="./IMAGE/OD條抑制.png" class="img-thumbnail"
+              onclick="imgclick(ODDown)" id="ODDown" alt="ODDown">
+            <img src="./IMAGE/弱耐上升.png" class="img-thumbnail"
+              onclick="imgclick(weakResUP)" id="weakResUP" alt="weakResUP">
+            <img src="./IMAGE/弱體成功率.png" class="img-thumbnail"
+              onclick="imgclick(dbUP)" id="dbUP" alt="dbUP">
+
+            <img src="./IMAGE/火屬攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(fireDmg)" id="fireDmg" alt="fireDmg">
+            <img src="./IMAGE/水屬性攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(waterDmg)" id="waterDmg" alt="waterDmg">
+            <img src="./IMAGE/土屬性攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(earthDmg)" id="earthDmg" alt="earthDmg">
+            <img src="./IMAGE/風屬性攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(windDmg)" id="windDmg" alt="windDmg">
+            <img src="./IMAGE/光屬性攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(lightDmg)" id="lightDmg" alt="lightDmg">
+
+            <img src="./IMAGE/闇屬性攻擊力.png" class="img-thumbnail"
+              onclick="imgclick(darkDmg)" id="darkDmg" alt="darkDmg">
+            <img src="./IMAGE/火屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(fireRes)" id="fireRes" alt="fireRes">
+            <img src="./IMAGE/水屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(waterRes)" id="waterRes" alt="waterRes">
+            <img src="./IMAGE/土屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(earthRes)" id="earthRes" alt="earthRes">
+            <img src="./IMAGE/風屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(windRes)" id="windRes" alt="windRes">
+
+            <img src="./IMAGE/光屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(lightRes)" id="lightRes" alt="lightRes">
+            <img src="./IMAGE/闇屬性輕減.png" class="img-thumbnail"
+              onclick="imgclick(darkRes)" id="darkRes" alt="darkRes">
+            <img src="./IMAGE/奧義傷害.png" class="img-thumbnail"
+              onclick="imgclick(msDmg)" id="msDmg" alt="msDmg">
+            <img src="./IMAGE/奧義傷害上限.png" class="img-thumbnail"
+              onclick="imgclick(msDmgLimit)" id="msDmgLimit" alt="msDmgLimit">
+            <img src="./IMAGE/爆擊率.png" class="img-thumbnail"
+              onclick="imgclick(cri)" id="cri" alt="cri">
+
+            <img src="./IMAGE/DA.png" class="img-thumbnail"
+              onclick="imgclick(da)" id="da" alt="da">
+            <img src="./IMAGE/TA.png" class="img-thumbnail"
+              onclick="imgclick(ta)" id="ta" alt="ta">
+            <img src="./IMAGE/奧義值上升.png" class="img-thumbnail"
+              onclick="imgclick(msUp)" id="msUp" alt="msUp">
+            <img src="./IMAGE/BK傷害強化.png" class="img-thumbnail"
+              onclick="imgclick(bkDmg)" id="bkDmg" alt="bkDmg">
+            <img src="./IMAGE/BKMODE加速.png" class="img-thumbnail"
+              onclick="imgclick(bkUP)" id="bkUP" alt="bkUP">
+
+            <img src="./IMAGE/ATK上升防禦下降.png" class="img-thumbnail"
+              onclick="imgclick(atkUpDefDown)" id="atkUpDefDown"
+              alt="atkUpDefDown">
+            <img src="./IMAGE/防禦上升ATK下降.png" class="img-thumbnail"
+              onclick="imgclick(defUpAtkDown)" id="defUpAtkDown"
+              alt="defUpAtkDown">
+            <img src="./IMAGE/反射.png" class="img-thumbnail"
+              onclick="imgclick(reflex)" id="reflex" alt="reflex">
+            <img src="./IMAGE/迴避.png" class="img-thumbnail"
+              onclick="imgclick(avoid)" id="avoid" alt="avoid">
+            <img src="./IMAGE/敵對心UP.png" class="img-thumbnail"
+              onclick="imgclick(hostilityUp)" id="hostilityUp" alt="hostilityUp">
+
+            <img src="./IMAGE/敵對心DOWM.png" class="img-thumbnail"
+              onclick="imgclick(hostilityDown)" id="hostilityDown"
+              alt="hostilityDown">
+            <img src="./IMAGE/背水.png" class="img-thumbnail"
+              onclick="imgclick(enmity)" id="enmity" alt="enmity">
+            <img src="./IMAGE/渾身.png" class="img-thumbnail"
+              onclick="imgclick(stamina)" id="stamina" alt="stamina">
+            <img src="./IMAGE/反擊傷害.png" class="img-thumbnail"
+              onclick="imgclick(fightBackDmg)" id="fightBackDmg"
+              alt="fightBackDmg">
+            <img src="./IMAGE/被動.png" class="img-thumbnail"
+              onclick="imgclick(subSkill)" id="subSkill" alt="subSkill">
+
+            <img src="./IMAGE/傷害上限.png" class="img-thumbnail"
+              onclick="imgclick(dmgLimit1)" id="dmgLimit1" alt="dmgLimit1">
+            <img src="./IMAGE/傷害上限.png" class="img-thumbnail"
+              onclick="imgclick(dmgLimit2)" id="dmgLimit2" alt="dmgLimit2">
+            <img src="./IMAGE/通常攻擊與傷.jpg" class="img-thumbnail"
+              onclick="imgclick(attackDmgExtra)" id="attackDmgExtra"
+              alt="attackDmgExtra">
+            <img src="./IMAGE/技能傷害與傷.png" class="img-thumbnail"
+              onclick="imgclick(skillDmgExtra)" id="skillDmgExtra"
+              alt="skillDmgExtra">
+            <img src="./IMAGE/奧義傷害與傷.png" class="img-thumbnail"
+              onclick="imgclick(msDmgExtra)" id="msDmgExtra" alt="msDmgExtra">
+
+            <img src="./IMAGE/轉世/ATK_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_atk)" id="arcarum_atk" alt="arcarum_atk">
+            <img src="./IMAGE/轉世/防禦力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_def)" id="arcarum_def" alt="arcarum_def">
+            <img src="./IMAGE/轉世/HP_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_hp)" id="arcarum_hp" alt="arcarum_hp">
+            <img src="./IMAGE/轉世/DA_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_da)" id="arcarum_da" alt="arcarum_da">
+            <img src="./IMAGE/轉世/TA_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_ta)" id="arcarum_ta" alt="arcarum_ta">
+
+            <img src="./IMAGE/轉世/爆擊傷害_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_cri)" id="arcarum_cri" alt="arcarum_cri">
+            <img src="./IMAGE/轉世/火屬攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_fireDmg)" id="arcarum_fireDmg"
+              alt="arcarum_fireDmg">
+            <img src="./IMAGE/轉世/水屬性攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_waterDmg)" id="arcarum_waterDmg"
+              alt="arcarum_waterDmg">
+            <img src="./IMAGE/轉世/土屬性攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_earthDmg)" id="arcarum_earthDmg"
+              alt="arcarum_earthDmg">
+            <img src="./IMAGE/轉世/風屬性攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_windDmg)" id="arcarum_windDmg"
+              alt="arcarum_windDmg">
+
+            <img src="./IMAGE/轉世/光屬性攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_lightDmg)" id="arcarum_lightDmg"
+              alt="arcarum_lightDmg">
+            <img src="./IMAGE/轉世/闇屬性攻擊力_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_drakDmg)" id="arcarum_drakDmg"
+              alt="arcarum_drakDmg">
+            <img src="./IMAGE/轉世/背水_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_enmity)" id="arcarum_enmity"
+              alt="arcarum_enmity">
+            <img src="./IMAGE/轉世/渾身_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_stamina)" id="arcarum_stamina"
+              alt="arcarum_stamina">
+            <img src="./IMAGE/轉世/技能傷害_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_skillDmg)" id="arcarum_skillDmg"
+              alt="arcarum_skillDmg">
+
+            <img src="./IMAGE/轉世/技能傷害上限_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_skillDmgLimit)"
+              id="arcarum_skillDmgLimit" alt="arcarum_skillDmgLimit">
+            <img src="./IMAGE/轉世/奧義傷害_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_msDmg)" id="arcarum_msDmg"
+              alt="arcarum_msDmg">
+            <img src="./IMAGE/轉世/奧義傷害上限_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_msDmgLimit)" id="arcarum_msDmgLimit"
+              alt="arcarum_msDmgLimit">
+            <img src="./IMAGE/轉世/奧義值上升_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_msUp)" id="arcarum_msUp"
+              alt="arcarum_msUp">
+            <img src="./IMAGE/轉世/弱耐上升_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_weakResUP)" id="arcarum_weakResUP"
+              alt="arcarum_weakResUP">
+
+            <img src="./IMAGE/轉世/弱體成功率_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_dbUP)" id="arcarum_dbUP"
+              alt="arcarum_dbUP">
+            <img src="./IMAGE/轉世/火屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_fireRes)" id="arcarum_fireRes"
+              alt="arcarum_fireRes">
+            <img src="./IMAGE/轉世/水屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_waterRes)" id="arcarum_waterRes"
+              alt="arcarum_waterRes">
+            <img src="./IMAGE/轉世/土屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_earthRes)" id="arcarum_earthRes"
+              alt="arcarum_earthRes">
+            <img src="./IMAGE/轉世/風屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_windRes)" id="arcarum_windRes"
+              alt="arcarum_windRes">
+
+            <img src="./IMAGE/轉世/光屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_lightRes)" id="arcarum_lightRes"
+              alt="arcarum_lightRes">
+            <img src="./IMAGE/轉世/闇屬性輕減_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_darkRes)" id="arcarum_darkRes"
+              alt="arcarum_darkRes">
+            <img src="./IMAGE/轉世/反射_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_reflex)" id="arcarum_reflex"
+              alt="arcarum_reflex">
+            <img src="./IMAGE/轉世/迴避_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_avoid)" id="arcarum_avoid"
+              alt="arcarum_avoid">
+            <img src="./IMAGE/轉世/回復_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_reply)" id="arcarum_reply"
+              alt="arcarum_reply">
+
+            <img src="./IMAGE/轉世/通常攻擊與傷_轉世.PNG" class="img-thumbnail"
+              onclick="imgclick(arcarum_attackDmgExtra)"
+              id="arcarum_attackDmgExtra" alt="arcarum_attackDmgExtra">
+            <img src="./IMAGE/轉世/被動_轉世.png" class="img-thumbnail"
+              onclick="imgclick(arcarum_subSkill)" id="arcarum_subSkill"
+              alt="arcarum_subSkill">
+
+          </div>
+          <div class="col-md-7 ">
+            <div class="row g-3">
+              <div class="col-md-12">
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnblance" tag="平衡" onclick="btnImg(btnblance)">平衡</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnAtk" tag="攻擊" onclick="btnImg(btnAtk)">攻擊</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnDef" tag="防禦" onclick="btnImg(btnDef)">防禦</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnReply" tag="回復" onclick="btnImg(btnReply)">回復</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnSpec" tag="特殊" onclick="btnImg(btnSpec)">特殊</button>
+              </div>
+              <div class=" col-md-12 ">
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnHum" tag="人類" onclick="btnImg(btnHum)">人類</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnElf" tag="獸耳" onclick="btnImg(btnElf)">獸耳</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnCow" tag="牛族" onclick="btnImg(btnCow)">牛族</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnLalafa" tag="矮子" onclick="btnImg(btnLalafa)">矮子</button>
+                <button class="btn btn-outline-primary btn-sm" type="button"
+                  id="btnSum" tag="星晶" onclick="btnImg(btnSum)">星晶</button>
+              </div>
+              <div class=" col-md-12  ">
+                <input type="text" class="form-control" id="title"
+                  placeholder="名稱">
+              </div>
+              <div class=" col-md-2">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+                  class="img-thumbnail" id="outImg1" onclick="imgClear(outImg1)"
+                  alt="empty">
+              </div>
+              <div class=" col-md-2">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+                  class="img-thumbnail" id="outImg2" onclick="imgClear(outImg2)"
+                  alt="empty">
+              </div>
+              <div class=" col-md-2">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+                  class="img-thumbnail" id="outImg3" onclick="imgClear(outImg3)"
+                  alt="empty">
+              </div>
+              <div class=" col-md-2">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+                  class="img-thumbnail" id="outImg4" onclick="imgClear(outImg4)"
+                  alt="empty">
+              </div>
+              <div class=" col-md-2">
+                <img
+                  src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+                  class="img-thumbnail" id="outImg5" onclick="imgClear(outImg5)"
+                  alt="empty">
+              </div>
+              <div class="col-sm-12 invisible" id="subSkillDiv">
+                <label for="subSkillInfo" class="form-label">被動</label>
+                <input type="text" class="form-control" id="subSkillInfo"
+                  placeholder
+                  value>
+              </div>
+            </div>
+            <br />
+            <button class="btn btn-primary btn-sm" type="button"
+              id="btnOutput" onclick="btnOutput()">輸出</button>
+            <button class="btn btn-secondary btn-sm" type="button"
+              id="btnClear" onclick="btnInit()">清空</button>
+            <br />
+            <div class="form-group">
+              <label for="output">主頁匯出</label>
+              <textarea class="form-control" id="output" rows="12"></textarea>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <!--<script src="./renderer.js"></script>-->
+    <script src="./LB.js"></script>
+    <script src="./css/js/bootstrap.js"></script>
+    <script src="./css/js/bootstrap.bundle.js"></script>
+    <script src="./css/js/bootstrap.esm.js"></script>
+    <script src="./css/checkout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./css/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./css/checkout.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>GbfSSRList</title>
+  </head>
+  <body>
+    <br />
+    <button class="btn btn-secondary" type="button" id="btnPro">雛型字串</button>
+    <button class="btn btn-primary" type="button" id="btnInit">清空</button>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">主頁面</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mainTitle.html">個人頁</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LB.html">LB</a>
+      </li>
+    </ul>
+    <div class="container-fluid">
+      <main>
+        <div class="row g-5">
+          <div class="col-md-12 ">
+            <form class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-2">
+                  <label for="No" class="form-label">No.</label>
+                  <input type="text" class="form-control" id="No" placeholder
+                    value>
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="image" class="form-label">圖片</label>
+                  <input type="text" class="form-control" id="image" placeholder
+                    value>
+                </div>
+                <div class="col-2">
+                  <label for="hp" class="form-label">HP</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="hp" placeholder>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <label for="atk" class="form-label">ATK</label>
+                  <input type="email" class="form-control" id="atk" placeholder>
+                </div>
+
+                <div class="col-2">
+                  <label for="element" class="form-label">屬性</label>
+                  <select class="form-select" id="element">
+                    <option value="火">火</option>
+                    <option value="水">水</option>
+                    <option value="土">土</option>
+                    <option value="風">風</option>
+                    <option value="光">光</option>
+                    <option value="闇">闇</option>
+                  </select>
+                </div>
+
+                <div class="col-10">
+                  <label for="jpName" class="form-label">日文名</label>
+                  <input type="text" class="form-control" id="jpName"
+                    placeholder>
+                </div>
+                <div class="col-2">
+                  <label for="type" class="form-label">Type</label>
+                  <select class="form-select" id="type">
+                    <option value="平衡">平衡</option>
+                    <option value="攻撃">攻撃</option>
+                    <option value="防御">防御</option>
+                    <option value="回復">回復</option>
+                    <option value="特殊">特殊</option>
+                  </select>
+                </div>
+                <div class="col-10">
+                  <label for="twName" class="form-label">中文名</label>
+                  <input type="text" class="form-control" id="twName"
+                    placeholder>
+                </div>
+
+                <div class="col-2">
+                  <label for="proud1" class="form-label">得意1</label>
+                  <select class="form-select" id="proud1">
+                    <option>劍</option>
+                    <option>短劍</option>
+                    <option>槍</option>
+                    <option>斧</option>
+                    <option>杖</option>
+                    <option>銃</option>
+                    <option>格鬥</option>
+                    <option>弓</option>
+                    <option>樂器</option>
+                    <option>刀</option>
+                  </select>
+                </div>
+
+                <div class="col-2">
+                  <label for="proud2" class="form-label">得意2</label>
+                  <select class="form-select" id="proud2">
+                    <option value> </option>
+                    <option>劍</option>
+                    <option>短劍</option>
+                    <option>槍</option>
+                    <option>斧</option>
+                    <option>杖</option>
+                    <option>銃</option>
+                    <option>格鬥</option>
+                    <option>弓</option>
+                    <option>樂器</option>
+                    <option>刀</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="race" class="form-label">種族</label>
+                  <select class="form-select" id="race">
+                    <option>ヒューマン</option>
+                    <option>エルーン</option>
+                    <option>ドラフ</option>
+                    <option>ハーヴィン</option>
+                    <option>星晶獣</option>
+                    <option>その他</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="get" class="form-label">入手</label>
+                  <select class="form-select" id="get">
+                    <option>恆常池</option>
+                    <option>活動免費</option>
+                    <option>夏日池</option>
+                    <option>限定池</option>
+                    <option>BD特典</option>
+                    <option>情人池</option>
+                    <option>聖誕池</option>
+                    <option>萬聖池</option>
+                  </select>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="over">
+                    <label class="form-check-label" for="over">終解</label>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <button class="w-100 btn btn-primary btn-lg" type="button"
+                id="btnOutput">輸出</button>
+              <br />
+              <div class="form-group">
+                <label for="Output">主頁匯出</label>
+                <textarea class="form-control" id="Output" rows="6"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <!--<script src="./renderer.js"></script>-->
+    <script src="./gbfssrList.js"></script>
+    <script src="./css/js/bootstrap.js"></script>
+    <script src="./css/js/bootstrap.bundle.js"></script>
+    <script src="./css/js/bootstrap.esm.js"></script>
+    <script src="./css/checkout.js"></script>
+  </body>
+</html>
