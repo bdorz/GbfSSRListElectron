@@ -1,0 +1,2 @@
+# GbfSSRListElectron
+Electron版本
